@@ -2,10 +2,11 @@
 
 import React from 'react';
 
-const CatList = (catPics) => {
-    debugger
-    const cats = catPics.map((cat) => {
-        return <img>{cat.catPics}</img>
+const CatList = (props) => {
+    console.log(props)
+    //we have to access the catpics property in props
+    const cats = props.catPics.map((cat) => {
+        return <img src={cat.url} key={cat.id}></img>
     })
    return<div>{cats}</div>
 }

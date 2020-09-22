@@ -1,7 +1,7 @@
 import React, { Component } from 'react';//1
 import { connect } from 'react-redux';
 import { fetchCats } from './actions/catActions';
- import CatList  from './CatList'
+   import CatList  from './CatList'
 
 class App extends Component {   
   
@@ -11,12 +11,13 @@ componentDidMount(){
 }
 
   render() {
+    //debugger
     console.log(this.props.catPics)
     //empty array for all the catPics in state for right now initially
     return (
       <div className = "App">
         <h1>CatBook</h1>
-        <CatList catPics={this.props.catPics}/>
+        <CatList catPics={this.props.catPics} />
       </div>
     );
   }
